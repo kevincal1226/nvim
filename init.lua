@@ -27,28 +27,3 @@ cmp.setup({
     { name = "path" },
   },
 })
-
-require('lazy').setup({
-  spec = {
-    -- Other plugins
-    { 'kdheepak/lazygit.nvim' },
-  },
-  defaults = {
-    lazy = false,
-    version = false,
-  },
-  install = { colorscheme = { "tokyonight", "habamax" } },
-  checker = {
-    enabled = true,
-    notify = false,
-  },
-  performance = {
-    rtp = {
-      disabled_plugins = {
-        "gzip",
-        "tarPlugin",
-        "zipPlugin",
-      },
-    },
-  },
-})
