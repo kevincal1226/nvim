@@ -15,6 +15,20 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      local lspconfig = require("lspconfig")
+
+      -- Configure clangd
+      lspconfig.clangd.setup({
+        cmd = { "clangd", "--background-index" },
+        filetypes = { "c", "cpp", "objc", "objcpp" },
+        root_dir = lspconfig.util.root_pattern("compile_commands.json", ".git"),
+        -- You can add other settings here
+      })
+    end,
+  },
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
@@ -22,6 +36,7 @@ require("lazy").setup({
     { import = "plugins" },
     {
       "nvim-telescope/telescope.nvim",
+      tag = "0.1.8",
       version = "*",
       dependencies = { "nvim-lua/plenary.nvim" },
       config = function()
