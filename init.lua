@@ -10,6 +10,8 @@ end
 
 local wk = require("which-key")
 
+require("plugins.snippets")
+
 -- add custom key binds
 wk.add({
   { "<leader>t", ":lua open_split_terminal_and_resize()<CR>", desc = "Open Split Terminal" },
