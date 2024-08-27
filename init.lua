@@ -8,6 +8,8 @@ function _G.open_split_terminal_and_resize()
   vim.cmd("startinsert")
 end
 
+require("config.keymaps")
+
 local wk = require("which-key")
 
 -- add custom key binds
