@@ -8,6 +8,8 @@ function _G.open_split_terminal_and_resize()
   vim.cmd("startinsert")
 end
 
+require("config.keymaps")
+
 local wk = require("which-key")
 
 require("plugins.snippets")
