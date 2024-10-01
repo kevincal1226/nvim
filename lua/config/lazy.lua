@@ -58,6 +58,12 @@ require("lazy").setup({
                 })
             end,
         },
+        {
+            "mfussenegger/nvim-dap",
+            config = function()
+                -- Add your nvim-dap configuration here
+            end,
+        },
     },
     defaults = {
         -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
