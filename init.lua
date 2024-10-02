@@ -48,12 +48,12 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     end,
 })
 
-local lspconfig = require'lspconfig'
+local lspconfig = require("lspconfig")
 
-lspconfig.gopls.setup{
+lspconfig.gopls.setup({
     cmd = { "gopls" },
     filetypes = { "go" },
-    root_dir = require'lspconfig'.util.root_pattern("go.mod", ".git"),
+    root_dir = require("lspconfig").util.root_pattern("go.mod", ".git"),
     settings = {
         gopls = {
             usePlaceholders = true,
@@ -61,5 +61,4 @@ lspconfig.gopls.setup{
             staticcheck = true,
         },
     },
-}
-
+})
