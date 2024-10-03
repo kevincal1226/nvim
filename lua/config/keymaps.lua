@@ -6,7 +6,12 @@
 require("telescope").load_extension("file_browser")
 
 -- Define the custom mapping
-vim.keymap.set("n", "<leader><space>", ":Telescope file_browser path=%:p:h=%:p:h<cr>", { desc = "Browse files" })
+vim.keymap.set(
+    "n",
+    "<leader><space>",
+    ":Telescope file_browser path=%:p:h=%:p:h<cr>",
+    { desc = "Browse files" }
+)
 
 vim.keymap.set(
     "n",
@@ -14,6 +19,19 @@ vim.keymap.set(
     ":tabnew | term<CR>",
     { desc = "Open New Terminal Tab", noremap = true, silent = true }
 )
+
+vim.keymap.set("n", "<C-p>", '"_viwP', {
+    desc = "replaces word and pastes",
+    noremap = true,
+    silent = true,
+})
+
+--vim.keymap.set("n", "<C-U>", '"_ddP', {
+--    desc = "Deletes line in void register and pastes",
+--    noremap = true,
+--    silent = true,
+--})
+
 -- Load the file browser extension
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
