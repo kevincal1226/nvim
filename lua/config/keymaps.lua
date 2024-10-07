@@ -26,6 +26,11 @@ vim.keymap.set("n", "<C-p>", '"_viwP', {
     silent = true,
 })
 
+vim.keymap.set("n", "<A-[>", '"_ddP', {
+    desc = "deletes line and pastes",
+    silent = true,
+    noremap = true,
+})
 --vim.keymap.set("n", "<C-U>", '"_ddP', {
 --    desc = "Deletes line in void register and pastes",
 --    noremap = true,
