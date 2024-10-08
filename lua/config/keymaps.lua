@@ -31,17 +31,6 @@ vim.keymap.set("n", "<leader>d", '"_ddP', {
     silent = true,
     noremap = true,
 })
-local function print_mapping(mode, lhs)
-    local map = vim.fn.maparg(lhs, mode, false, true)
-    if map and not vim.tbl_isempty(map) then
-        print(string.format("Mapping for %s in mode %s:", lhs, mode))
-        print(vim.inspect(map))
-    else
-        print(string.format("No mapping found for %s in mode %s", lhs, mode))
-    end
-end
-
-print_mapping("n", "<A-p>")
 -- Check our specific mapping
 --vim.keymap.set("n", "<C-U>", '"_ddP', {
 --    desc = "Deletes line in void register and pastes",
