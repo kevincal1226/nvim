@@ -20,17 +20,29 @@ vim.keymap.set(
     { desc = "Open New Terminal Tab", noremap = true, silent = true }
 )
 
-vim.keymap.set("n", "<C-p>", '"_viwP', {
+vim.keymap.set("n", "<leader>v", '"_viwP', {
     desc = "replaces word and pastes",
     noremap = true,
     silent = true,
 })
 
-vim.keymap.set("n", "<A-[>", '"_ddP', {
+vim.keymap.set("n", "<leader>d", '"_ddP', {
     desc = "deletes line and pastes",
     silent = true,
     noremap = true,
 })
+local function print_mapping(mode, lhs)
+    local map = vim.fn.maparg(lhs, mode, false, true)
+    if map and not vim.tbl_isempty(map) then
+        print(string.format("Mapping for %s in mode %s:", lhs, mode))
+        print(vim.inspect(map))
+    else
+        print(string.format("No mapping found for %s in mode %s", lhs, mode))
+    end
+end
+
+print_mapping("n", "<A-p>")
+-- Check our specific mapping
 --vim.keymap.set("n", "<C-U>", '"_ddP', {
 --    desc = "Deletes line in void register and pastes",
 --    noremap = true,
