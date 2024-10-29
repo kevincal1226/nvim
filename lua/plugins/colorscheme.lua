@@ -14,7 +14,6 @@
 --        vim.cmd("colorscheme flow")
 --    end,
 --}
-
 return {
     {
         "rebelot/kanagawa.nvim",
@@ -32,11 +31,17 @@ return {
             dimInactive = false,
             terminalColors = true,
             colors = {
-                palette = {},
+                palette = {
+                    wave = {
+                        bg = "#1a1c24", -- Darker background color
+                    },
+                },
                 theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
             },
             overrides = function(colors)
-                return {}
+                return {
+                    Normal = { bg = colors.palette.wave.bg },
+                }
             end,
             theme = "wave", -- Load "wave" theme when 'background' option is not set
             background = {
