@@ -1,18 +1,54 @@
-return {
-    "0xstepit/flow.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-    config = function()
-        require("flow").setup({
-            transparent = false, -- Set transparent background.
-            fluo_color = "pink", --  Fluo color: pink, yellow, orange, or green.
-            mode = "bright", -- Intensity of the palette: normal, bright, desaturate, or dark. Notice that dark is ugly!
-            aggressive_spell = false, -- Display colors for spell check.
-        })
+--return {
+--    "0xstepit/flow.nvim",
+--    lazy = false,
+--    priority = 1000,
+--    opts = {},
+--    config = function()
+--        require("flow").setup({
+--            transparent = false, -- Set transparent background.
+--            fluo_color = "pink", --  Fluo color: pink, yellow, orange, or green.
+--            mode = "bright", -- Intensity of the palette: normal, bright, desaturate, or dark. Notice that dark is ugly!
+--            aggressive_spell = false, -- Display colors for spell check.
+--        })
+--
+--        vim.cmd("colorscheme flow")
+--    end,
+--}
 
-        vim.cmd("colorscheme flow")
-    end,
+return {
+    {
+        "rebelot/kanagawa.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {
+            compile = false,
+            undercurl = true,
+            commentStyle = { italic = false },
+            functionStyle = {},
+            keywordStyle = { italic = false },
+            statementStyle = { bold = true },
+            typeStyle = {},
+            transparent = false,
+            dimInactive = false,
+            terminalColors = true,
+            colors = {
+                palette = {},
+                theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
+            },
+            overrides = function(colors)
+                return {}
+            end,
+            theme = "wave", -- Load "wave" theme when 'background' option is not set
+            background = {
+                dark = "wave",
+                light = "wave",
+            },
+        },
+        config = function(_, opts)
+            require("kanagawa").setup(opts)
+            vim.cmd("colorscheme kanagawa")
+        end,
+    },
 }
 
 -- Your existing LazyVim configuration...
