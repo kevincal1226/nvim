@@ -31,6 +31,12 @@ vim.keymap.set("n", "<leader>d", '"_ddP', {
     silent = true,
     noremap = true,
 })
+
+vim.keymap.set("n", "<leader>p", '"_dP', {
+    desc = "deletes currently highlighted stuff and pastes",
+    silent = true,
+    noremap = true,
+})
 -- Check our specific mapping
 --vim.keymap.set("n", "<C-U>", '"_ddP', {
 --    desc = "Deletes line in void register and pastes",
