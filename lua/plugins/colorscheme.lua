@@ -23,7 +23,7 @@ return {
             compile = false,
             undercurl = true,
             commentStyle = { italic = false },
-            functionStyle = { fg = "#0c89c7" },
+            functionStyle = {}, --fg = "#0c89c7" },
             keywordStyle = { italic = false },
             statementStyle = { bold = true },
             typeStyle = {},
