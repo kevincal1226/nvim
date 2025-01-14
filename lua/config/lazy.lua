@@ -29,8 +29,17 @@ require("lazy").setup({
 
             -- Configure clangd
             lspconfig.clangd.setup({
-                cmd = { "clangd", "--background-index" },
-                filetypes = { "c", "cpp", "objc", "objcpp" },
+                cmd = {
+                    "clangd",
+                    "--background-index",
+                    "--clang-tidy",
+                    "--header-insertion=never",
+                    "--completion-style=detailed",
+                    "--function-arg-placeholders",
+                    "--fallback-style=llvm",
+                    "--log=verbose",
+                },
+                filetypes = { "c", "cpp", "objc", "objcpp", "hpp", "h" },
                 root_dir = lspconfig.util.root_pattern(
                     "compile_commands.json",
                     ".git"

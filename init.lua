@@ -62,3 +62,13 @@ lspconfig.gopls.setup({
         },
     },
 })
+
+lspconfig.clangd.setup({
+    cmd = {
+        "clangd",
+        "--header-insertion=never",
+        "--log=verbose",
+    },
+    filetypes = { "c", "cpp", "objc", "objcpp", "hpp", "h" },
+    root_dir = lspconfig.util.root_pattern("compile_commands.json", ".git"),
+})
