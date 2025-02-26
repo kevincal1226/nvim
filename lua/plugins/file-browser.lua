@@ -1,26 +1,14 @@
 -- return {
---   "nvim-telescope/telescope-file-browser.nvim",
---   keys = {
---     {
---       "<leader>sB",
---       ":Telescope file_browser path=%:p:h=%:p:h<cr>",
---       desc = "Browse files",
+--     "nvim-telescope/telescope-file-browser.nvim",
+--     keys = {
+--         {
+--             "<leader>sB",
+--             ":Telescope file_browser path=%:p:h=%:p:h<cr>",
+--             desc = "Browse files",
+--         },
 --     },
---   },
---   config = function()
---     require("telescope").load_extension("file_browser")
---   end,
--- }
---
--- return {
---     "hrsh7th/nvim-cmp",
---     opts = function(_, opts)
---         local cmp = require("cmp")
---
---         opts.mapping = vim.tbl_deep_extend("force", opts.mapping, {
---             ["<CR>"] = cmp.config.disable,
---             ["<C-y"] = LazyVim.cmp.confirm({ select = true }),
---         })
+--     config = function()
+--         require("telescope").load_extension("file_browser")
 --     end,
 -- }
 
