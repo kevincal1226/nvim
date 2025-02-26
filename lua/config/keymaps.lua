@@ -3,7 +3,7 @@
 -- Add any additional keymaps here
 -- Disable the default keymap for <leader><leader>
 --
-require("telescope").load_extension("file_browser")
+-- require("telescope").load_extension("file_browser")
 
 -- Define the custom mapping
 vim.keymap.set(

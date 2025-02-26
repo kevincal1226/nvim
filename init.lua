@@ -24,17 +24,17 @@ wk.add({
 })
 
 -- change autocomplete to tab instead of enter
-local cmp = require("cmp")
-cmp.setup({
-    mapping = {
-        ["<Tab>"] = cmp.mapping.confirm({ select = true }),
-    },
-    sources = {
-        { name = "nvim_lsp" },
-        --{ name = "buffer" },
-        { name = "path" },
-    },
-})
+-- local cmp = require("cmp")
+-- cmp.setup({
+--     mapping = {
+--         ["<Tab>"] = cmp.mapping.confirm({ select = true }),
+--     },
+--     sources = {
+--         { name = "nvim_lsp" },
+--         --{ name = "buffer" },
+--         { name = "path" },
+--     },
+-- })
 
 local format_group =
     vim.api.nvim_create_augroup("PythonFormatOnSave", { clear = true })
