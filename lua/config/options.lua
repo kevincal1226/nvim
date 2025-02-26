@@ -20,3 +20,5 @@ vim.o.title = true
 vim.o.titlestring = "%{fnamemodify(getcwd(), ':t')}"
 
 vim.opt.clipboard = "unnamedplus"
+
+vim.g.snacks_animate = false
