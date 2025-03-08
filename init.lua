@@ -106,7 +106,7 @@ vim.keymap.set("n", "<leader>a", function()
     harpoon:list():add()
 end, { desc = "Add to harpoon" })
 
-vim.keymap.set("n", "<C-i>", function()
+vim.keymap.set("n", "<C-t>", function()
     harpoon.ui:toggle_quick_menu(harpoon:list())
 end, { desc = "Open harpoon quick menu" })
 
