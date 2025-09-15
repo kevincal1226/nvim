@@ -48,6 +48,8 @@ return {
             },
             overrides = function(colors)
                 return {
+                    -- Function = { fg = "#a4c6eb" },
+                    Function = { fg = colors.palette.lotusTeal2 },
                     Normal = { bg = colors.palette.wave.bg },
                     YankHighlight = { bg = "#2d2d2d", fg = colors.fg }, -- Darker yank color
                     Visual = { bg = "#4a4a4a" }, -- Visual mode background color
