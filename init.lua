@@ -66,7 +66,7 @@ lspconfig.gopls.setup({
 lspconfig.clangd.setup({
     cmd = {
         "clangd",
-        "--header-insertion=never",
+        -- "--header-insertion=never",
         "--log=verbose",
     },
     filetypes = { "c", "cpp", "objc", "objcpp", "hpp", "h" },
