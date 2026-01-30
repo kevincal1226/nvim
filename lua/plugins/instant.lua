@@ -1,0 +1,5 @@
+return {
+    {
+        "jbyuki/instant.nvim",
+    },
+}
