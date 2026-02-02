@@ -2,7 +2,7 @@ return {
     {
         "neovim/nvim-lspconfig",
         init = function()
-            local keys = require("lazyvim.plugins.lsp.keymaps").get()
+            local keys = require("lazyvim.plugins.lsp.keymaps")._keys
             -- disable a keymap
             keys[#keys + 1] = { "<leader><leader>", false }
 
